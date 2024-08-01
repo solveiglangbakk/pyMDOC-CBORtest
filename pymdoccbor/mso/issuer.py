@@ -189,7 +189,7 @@ class MsoIssuer(MsoX509Fabric):
                 # TODO: x509 (cbor2.CBORTag(33)) and federation trust_chain support (cbor2.CBORTag(27?)) here
                 # 33 means x509chain standing to rfc9360
                 # in both protected and unprotected for interop purpose .. for now.
-                uhdr={33: _cert},
+                uhdr={34: _cert},
                 payload=cbor2.dumps(
                     cbor2.CBORTag(24, cbor2.dumps(payload, canonical=True)),
                     canonical=True,
@@ -208,7 +208,7 @@ class MsoIssuer(MsoX509Fabric):
                 # TODO: x509 (cbor2.CBORTag(33)) and federation trust_chain support (cbor2.CBORTag(27?)) here
                 # 33 means x509chain standing to rfc9360
                 # in both protected and unprotected for interop purpose .. for now.
-                uhdr={33: _cert},
+                uhdr={34: _cert},
                 payload=cbor2.dumps(
                     cbor2.CBORTag(24, cbor2.dumps(payload, canonical=True)),
                     canonical=True,
